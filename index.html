@@ -728,28 +728,16 @@
 
 </footer>
 
-<!-- SCRIPT ADICIONADO -->
-
 <script>
-
   function enviarMensagem(botao, moto) {
-
     const containerMoto = botao.closest('.moto');
-
     const plano = containerMoto.querySelector('.plano').value;
-
     const parcelas = containerMoto.querySelector('.parcelas').value;
-
     const numero = '5591993208869';
-
     const texto = Olá Ana Paula, tenho interesse na moto ${moto} pelo plano: ${plano}, parcelas: ${parcelas}.;
-
     const url = https://wa.me/${numero}?text=${encodeURIComponent(texto)};
-
     window.open(url, '_blank');
-
   }
-
 </script>
 
 </body>
