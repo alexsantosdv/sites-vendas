@@ -334,7 +334,8 @@
 <footer>
   &copy; 2025 Monaco Motocenter - Atendimento Ana Paula
 </footer>
-<script>
+
+  <script>
   function enviarMensagem(botao, moto) {
     const containerMoto = botao.closest('.moto');
     const planoSelect = containerMoto.querySelector('.plano');
@@ -347,7 +348,8 @@
     const texto = Olá Ana Paula, tenho interesse na moto ${moto} pelo plano: ${plano}, parcelas: ${parcelas}.;
     const url = https://wa.me/${numero}?text=${encodeURIComponent(texto)};
     window.open(url, '_blank');
-  }
+  }
 </script>
+  
 </body>
 </html>
