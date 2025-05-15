@@ -336,20 +336,20 @@
 <footer>
   &copy; 2025 Monaco Motocenter - Atendimento Ana Paula
 </footer>
-<script>
-  function enviarMensagem(botao, moto) {
-    const containerMoto = botao.closest('.moto');
-    const planoSelect = containerMoto.querySelector('.plano');
-    const parcelasSelect = containerMoto.querySelector('.parcelas');
+<div class="moto">
+  <select class="plano">
+    <option value="Plano A">Plano A</option>
+    <option value="Plano B">Plano B</option>
+  </select>
 
-    const plano = planoSelect.value;
-    const parcelas = parcelasSelect.value;
+  <select class="parcelas">
+    <option value="12x">12x</option>
+    <option value="24x">24x</option>
+  </select>
 
-    const numero = '5591993208869';
-    const texto = Olá Ana Paula, tenho interesse na moto ${moto} pelo plano: ${plano}, parcelas: ${parcelas}.;
-    const url = https://wa.me/${numero}?text=${encodeURIComponent(texto)};
-    window.open(url, '_blank');
-  }
-</script>
+  <button class="btn-contato" onclick="enviarMensagem(this, 'Honda CBR 1000 RR-R')">
+    Falar com Ana Paula
+  </button>
+</div>
 </body>
 </html>
