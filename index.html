@@ -1,387 +1,757 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
+
 <head>
+
 <meta charset="UTF-8" />
+
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+
 <title>Monâco Motocenter - Ana Paula</title>
+
 <style>
+
   body {
+
     font-family: Arial, sans-serif;
+
     margin: 0; padding: 0;
+
     color: #eee;
+
     background:
+
       linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+
       url('https://motonewsbrasil.com/wp-content/uploads/2021/11/2022-HONDA-CBR-1000RR-R-FIREBLADE-SP-30TH-ANNIVERSARY.jpg') no-repeat center center fixed;
+
     background-size: cover;
+
   }
+
   header {
+
     background-color: rgba(214,0,28,0.9);
+
     color: white;
+
     padding: 25px 20px;
+
     text-align: center;
+
     box-shadow: 0 3px 8px rgba(0,0,0,0.7);
+
   }
+
   header h1 {
+
     margin: 0;
+
     font-weight: 700;
+
     text-shadow: 1px 1px 4px #000;
+
   }
+
   header p {
+
     margin: 5px 0 0;
+
     font-size: 1.1em;
+
     text-shadow: 1px 1px 3px #000;
+
   }
+
   .container {
+
     max-width: 960px;
+
     margin: 30px auto;
+
     background: rgba(20, 20, 20, 0.85);
+
     padding: 25px;
+
     border-radius: 10px;
+
     box-shadow: 0 0 15px #d6001caa;
+
   }
+
   h2 {
+
     color: #d6001c;
+
     margin-bottom: 25px;
+
     text-align: center;
+
     text-shadow: 1px 1px 4px #000;
+
   }
+
   .vendedor {
+
     text-align: center;
+
     margin-bottom: 30px;
+
     color: #eee;
+
     text-shadow: 1px 1px 3px #000;
+
   }
+
   .vendedor img {
+
     width: 120px;
+
     height: 120px;
+
     border-radius: 60px;
+
     border: 3px solid #d6001c;
+
     margin-bottom: 10px;
+
     object-fit: cover;
+
   }
+
   .opcoes-plano {
+
     margin-bottom: 30px;
+
     text-align: center;
+
   }
+
   select {
+
     font-size: 1.1em;
+
     padding: 8px 12px;
+
     border-radius: 8px;
+
     border: 1px solid #d6001c;
+
     outline: none;
+
     color: #222;
+
   }
+
   .motos {
+
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 25px;
+
     justify-content: center;
+
   }
+
   .moto {
+
     background: #222;
+
     border-radius: 12px;
+
     width: 280px;
+
     padding: 15px;
+
     box-shadow: 0 0 15px #d6001cbb;
+
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     transition: transform 0.3s ease;
+
   }
+
   .moto:hover {
+
     transform: scale(1.05);
+
     box-shadow: 0 0 25px #ff0011cc;
+
   }
+
   .moto img {
+
     max-width: 250px;
+
     border-radius: 10px;
+
     margin-bottom: 12px;
+
     object-fit: cover;
+
     box-shadow: 0 0 10px #d6001c;
+
   }
+
   .moto h3 {
+
     margin: 0 0 8px;
+
     color: #ff4c4c;
+
     font-size: 1.25em;
+
     text-shadow: 1px 1px 5px #000;
+
     text-align: center;
+
   }
+
   .descricao {
+
     font-size: 1em;
+
     margin-bottom: 12px;
+
     text-align: center;
+
     color: #ccc;
+
     text-shadow: 1px 1px 3px #000;
+
   }
+
   .preco {
+
     font-weight: bold;
+
     color: #ff6b6b;
+
     font-size: 1.3em;
+
     margin-bottom: 12px;
+
     text-shadow: 1px 1px 5px #000;
+
     text-align: center;
+
   }
+
   .opcoes {
+
     font-size: 0.95em;
+
     text-align: center;
+
     margin-bottom: 18px;
+
     line-height: 1.4;
+
     color: #ddd;
+
     text-shadow: 1px 1px 2px #000;
+
   }
+
   .btn-contato {
+
     background-color: #25d366;
+
     color: white;
+
     border: none;
+
     border-radius: 25px;
+
     padding: 12px 25px;
+
     font-size: 1em;
+
     cursor: pointer;
+
     text-decoration: none;
+
     display: inline-block;
+
     transition: background-color 0.3s;
+
     box-shadow: 0 0 8px #25d366cc;
+
   }
+
   .btn-contato:hover {
+
     background-color: #1ebe57;
+
     box-shadow: 0 0 15px #1ebe57cc;
+
   }
+
   footer {
+
     background-color: rgba(214,0,28,0.9);
+
     color: white;
+
     padding: 15px;
+
     text-align: center;
+
     margin-top: 40px;
+
     box-shadow: 0 -3px 8px rgba(0,0,0,0.7);
+
   }
+
   @media(max-width: 650px) {
+
     .motos {
+
       flex-direction: column;
+
       align-items: center;
+
     }
+
     .moto {
+
       width: 90%;
+
     }
+
   }
+
 </style>
+
 </head>
+
 <body>
+
 <header>
+
   <h1>Monâco Motocenter - Venda e Financiamento</h1>
+
   <p>Atendimento personalizado com Ana Paula</p>
+
 </header>
+
 <div class="container">
+
   <div class="vendedor">
+
     <img src="ANA.png" alt="Ana Paula"/>
+
     <h2>Ana Paula</h2>
+
     <p>Contato: (91) 9 9320-8869</p>
+
   </div>
+
   <h2>Modelos Disponíveis</h2>
+
   <div class="motos">
 
     <!-- MOTO BIZ -->
+
     <div class="moto">
+
       <img src="https://motonewsbrasil.com/wp-content/uploads/2024/08/Honda-Biz-125-EX-2025-BRANCA-1.jpg" />
+
       <h3>Honda Biz 125</h3>
+
       <p class="descricao">Praticidade e economia para o dia a dia.</p>
+
       <div class="preco">R$ 11.500,00</div>
+
       <div class="opcoes">
+
         Financiamento: a partir de R$ 450/mês<br />
+
         À vista: desconto de 5%<br />
+
         Consórcio disponível
+
         <div class="escolhas">
+
           <label style="color:#ddd;">Plano:
+
             <select class="plano">
+
               <option>À vista</option>
+
               <option>Financiamento</option>
+
               <option>Consórcio</option>
+
             </select>
+
           </label>
+
           <label style="color:#ddd; margin-left:10px;">Parcelas:
+
             <select class="parcelas">
+
               <option>12x</option>
+
               <option>24x</option>
+
               <option>36x</option>
+
               <option>72x</option>
+
             </select>
+
           </label>
+
         </div>
+
       </div>
+
       <button class="btn-contato" onclick="enviarMensagem(this, 'Honda Biz 125')">Falar com Ana Paula</button>
+
     </div>
 
     <!-- MOTO POP -->
+
     <div class="moto">
+
       <img src="https://motonewsbrasil.com/wp-content/uploads/2024/04/honda-pop-110i-es-2025-branca-lateral-direita.jpg" />
+
       <h3>Honda Pop 110i</h3>
+
       <p class="descricao">Robustez e versatilidade para todas as estradas.</p>
+
       <div class="preco">R$ 12.900,00</div>
+
       <div class="opcoes">
+
         Financiamento: a partir de R$ 520/mês<br />
+
         À vista: desconto de 6%<br />
+
         Consórcio disponível
+
         <div class="escolhas">
+
           <label style="color:#ddd;">Plano:
+
             <select class="plano">
+
               <option>À vista</option>
+
               <option>Financiamento</option>
+
               <option>Consórcio</option>
+
             </select>
+
           </label>
+
           <label style="color:#ddd; margin-left:10px;">Parcelas:
+
             <select class="parcelas">
+
               <option>12x</option>
+
               <option>24x</option>
+
               <option>36x</option>
+
               <option>72x</option>
+
             </select>
+
           </label>
+
         </div>
+
       </div>
+
       <button class="btn-contato" onclick="enviarMensagem(this, 'Honda Pop 110i')">Falar com Ana Paula</button>
+
     </div>
 
     <!-- ELITE -->
+
     <div class="moto">
+
       <img src="https://www.honda.com.br/motos/sites/hda/files/2018-12/elite_branca_4000x2042.jpg" />
+
       <h3>Honda Elite 125</h3>
+
       <p class="descricao">Moderna, ágil e confortável para a cidade.</p>
+
       <div class="preco">R$ 13.400,00</div>
+
       <div class="opcoes">
+
         Financiamento: a partir de R$ 540/mês<br />
+
         À vista: desconto de 6%<br />
+
         Consórcio disponível
+
         <div class="escolhas">
+
           <label style="color:#ddd;">Plano:
+
             <select class="plano">
+
               <option>À vista</option>
+
               <option>Financiamento</option>
+
               <option>Consórcio</option>
+
             </select>
+
           </label>
+
           <label style="color:#ddd; margin-left:10px;">Parcelas:
+
             <select class="parcelas">
+
               <option>12x</option>
+
               <option>24x</option>
+
               <option>36x</option>
+
               <option>72x</option>
+
             </select>
+
           </label>
+
         </div>
+
       </div>
+
       <button class="btn-contato" onclick="enviarMensagem(this, 'Honda Elite 125')">Falar com Ana Paula</button>
+
     </div>
 
     <!-- CG 160 -->
+
     <div class="moto">
+
       <img src="https://motonewsbrasil.com/wp-content/uploads/2024/10/Honda-CG-160-Start-CBS-2025-CINZA-2.jpeg" />
+
       <h3>Honda CG 160</h3>
+
       <p class="descricao">Potência e economia em um único modelo.</p>
+
       <div class="preco">R$ 14.100,00</div>
+
       <div class="opcoes">
+
         Financiamento: a partir de R$ 570/mês<br />
+
         À vista: desconto de 7%<br />
+
         Consórcio disponível
+
         <div class="escolhas">
+
           <label style="color:#ddd;">Plano:
+
             <select class="plano">
+
               <option>À vista</option>
+
               <option>Financiamento</option>
+
               <option>Consórcio</option>
+
             </select>
+
           </label>
+
           <label style="color:#ddd; margin-left:10px;">Parcelas:
+
             <select class="parcelas">
+
               <option>12x</option>
+
               <option>24x</option>
+
               <option>36x</option>
+
               <option>72x</option>
+
             </select>
+
           </label>
+
         </div>
+
       </div>
+
       <button class="btn-contato" onclick="enviarMensagem(this, 'Honda CG 160')">Falar com Ana Paula</button>
+
     </div>
 
     <!-- CB 300 -->
+
     <div class="moto">
+
       <img src="https://tse4.mm.bing.net/th?id=OIP.bBFCFqWam_SvYrBnuRCCVgHaEK&pid=Api&P=0&h=180" />
+
       <h3>Honda CB 300F</h3>
+
       <p class="descricao">Performance e estilo para quem exige mais.</p>
+
       <div class="preco">R$ 23.900,00</div>
+
       <div class="opcoes">
+
         Financiamento: a partir de R$ 890/mês<br />
+
         À vista: desconto de 8%<br />
+
         Consórcio disponível
+
         <div class="escolhas">
+
           <label style="color:#ddd;">Plano:
+
             <select class="plano">
+
               <option>À vista</option>
+
               <option>Financiamento</option>
+
               <option>Consórcio</option>
+
             </select>
+
           </label>
+
           <label style="color:#ddd; margin-left:10px;">Parcelas:
+
             <select class="parcelas">
+
               <option>12x</option>
+
               <option>24x</option>
+
               <option>36x</option>
+
               <option>72x</option>
+
             </select>
+
           </label>
+
         </div>
+
       </div>
+
       <button class="btn-contato" onclick="enviarMensagem(this, 'Honda CB 300F')">Falar com Ana Paula</button>
+
     </div>
 
     <!-- FIREBLADE -->
+
     <div class="moto">
+
       <img src="https://i1.wp.com/www.asphaltandrubber.com/wp-content/uploads/2019/11/2020-Honda-CBR1000RR-R-03.jpg?ssl=1" />
+
       <h3>Honda CBR 1000RR-R Fireblade</h3>
+
       <p class="descricao">Alta performance para os apaixonados por velocidade.</p>
+
       <div class="preco">R$ 90.000,00</div>
+
       <div class="opcoes">
+
         Financiamento: a partir de R$ 4.500/mês<br />
+
         À vista: desconto de 8%<br />
+
         Consórcio disponível
+
         <div class="escolhas">
+
           <label style="color:#ddd;">Plano:
+
             <select class="plano">
+
               <option>À vista</option>
+
               <option>Financiamento</option>
+
               <option>Consórcio</option>
+
             </select>
+
           </label>
+
           <label style="color:#ddd; margin-left:10px;">Parcelas:
+
             <select class="parcelas">
+
               <option>12x</option>
+
               <option>24x</option>
+
               <option>36x</option>
+
               <option>72x</option>
+
             </select>
+
           </label>
+
         </div>
+
       </div>
+
       <button class="btn-contato" onclick="enviarMensagem(this, 'Honda CBR 1000RR-R Fireblade')">Falar com Ana Paula</button>
+
     </div>
 
   </div>
+
 </div>
+
 <footer>
+
   &copy; 2025 Monaco Motocenter - Atendimento Ana Paula
+
 </footer>
 
 <!-- SCRIPT ADICIONADO -->
+
 <script>
+
   function enviarMensagem(botao, moto) {
+
     const containerMoto = botao.closest('.moto');
+
     const plano = containerMoto.querySelector('.plano').value;
+
     const parcelas = containerMoto.querySelector('.parcelas').value;
+
     const numero = '5591993208869';
+
     const texto = Olá Ana Paula, tenho interesse na moto ${moto} pelo plano: ${plano}, parcelas: ${parcelas}.;
-    const url = HTTPS://wa.me/${numero}?text=${encodeURIComponent(texto)};
+
+    const url = https://wa.me/${numero}?text=${encodeURIComponent(texto)};
+
     window.open(url, '_blank');
+
   }
+
 </script>
+
 </body>
+
 </html>
